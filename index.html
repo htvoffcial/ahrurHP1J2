@@ -72,9 +72,18 @@ s0.parentNode.insertBefore(s1,s0);
             background: white;
         }
         .aft{
-            visibility: hidden;
+            animation:opc 0.3s ease-out forwards;
         }
         
+        @keyframes opc {
+        0% {
+        opacity: 1;
+       }
+       100%{
+        opacity: 0;
+      visibility: hidden;
+       }
+     }
         </style>
         <script>
             window.onload=function(){
