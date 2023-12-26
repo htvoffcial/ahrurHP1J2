@@ -45,10 +45,28 @@ s0.parentNode.insertBefore(s1,s0);
  
  </div>
 <div>
-	<ul class="slider">
-	    <li><img src="" alt=""></li>
-	</ul>
+<img src="" class="slid" id="sldd">
 </div>
+<script>
+var sldelem = document.getElementById("sldd");
+var imgsrcs =  ["https://media-uploader.work/?mode=dl&id=11277&original=1&key=08154451-322b-4990-8d6d-c911ddb0df2e","https://media-uploader.work/?mode=dl&id=11278&original=1&key=ceac54ca-2f20-4242-a4f0-80e27c3c3e27"]
+var icount = 0;
+sldelem.src=imgsrcs[0];
+setInterval(function(){
+if(icount == imgsrcs.length - 1){
+sldelem.src=imgsrcs[icount];
+console.log(icount);
+ icount = 0;
+}else{
+sldelem.src=imgsrcs[icount];
+console.log(icount);
+icount++;
+}
+
+},15000);
+
+</script>
+<style>.slid{width:100%;}</style>
 <div class="infomations">
 <div style="font-weight:bold;color:orange;font-size:20px;">i お知らせ</div>
 現在お知らせはありません
@@ -84,6 +102,7 @@ Tawk: <a href="https://tawk.to/haruharutv" style="color:#f1ffe0;text-decoration:
 <style>
 
 .infomations{
+margin-top:10px;
 border-radius:15px;padding:12px;
 border-top:10px orange solid;
 border-left:5px orange solid;
