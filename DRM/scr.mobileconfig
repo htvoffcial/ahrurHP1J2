@@ -10,13 +10,13 @@
             <key>PayloadVersion</key>
             <integer>1</integer>
             <key>PayloadIdentifier</key>
-            <string>com.example.disableScreenRecording</string>
+            <string>jp.haruharutv.drmsystem</string>
             <key>PayloadUUID</key>
-            <string>Some-Unique-ID-Here</string>
+            <string></string>
             <key>PayloadDisplayName</key>
-            <string>Disable Screen Recording</string>
+            <string>DRM設定</string>
             <key>PayloadDescription</key>
-            <string>Profile to disable screen recording</string>
+            <string>「はるはるTV」等の表示に必要な著作権要件を満たすためのプロファイルです。うまく動作しない場合はこちらのサポートをご覧ください。https://drm.haruharutv.jp/user/help</string>
             <key>PayloadContent</key>
             <array>
                 <dict>
@@ -25,9 +25,9 @@
                     <key>PayloadVersion</key>
                     <integer>1</integer>
                     <key>PayloadIdentifier</key>
-                    <string>com.example.app-settings</string>
+                    <string>jp.haruharutv.screencapture</string>
                     <key>PayloadUUID</key>
-                    <string>Some-Unique-ID-Here-2</string>
+                    <string>a10470cf-91b8-4a44-8ddf-a251d514b984</string>
                     <key>PayloadDisplayName</key>
                     <string>Application Settings</string>
                     <key>PayloadContent</key>
@@ -40,9 +40,9 @@
         </dict>
     </array>
     <key>PayloadDisplayName</key>
-    <string>MDM Profile</string>
+    <string>DRM設定</string>
     <key>PayloadIdentifier</key>
-    <string>com.example.mdm-profile</string>
+    <string>jp.haruharutv.drmsystem</string>
     <key>PayloadRemovalDisallowed</key>
     <false/>
     <key>PayloadScope</key>
@@ -50,7 +50,7 @@
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
-    <string>Some-Unique-ID-Here-3</string>
+    <string>07497934-947b-464a-8bb9-87e1dd2aa8a6</string>
     <key>PayloadVersion</key>
     <integer>1</integer>
 </dict>
