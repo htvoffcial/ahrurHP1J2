@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadType</key>
+            <string>com.apple.configuration.profile</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadIdentifier</key>
+            <string>com.example.disableScreenRecording</string>
+            <key>PayloadUUID</key>
+            <string>Some-Unique-ID-Here</string>
+            <key>PayloadDisplayName</key>
+            <string>Disable Screen Recording</string>
+            <key>PayloadDescription</key>
+            <string>Profile to disable screen recording</string>
+            <key>PayloadContent</key>
+            <array>
+                <dict>
+                    <key>PayloadType</key>
+                    <string>com.apple.applications-settings</string>
+                    <key>PayloadVersion</key>
+                    <integer>1</integer>
+                    <key>PayloadIdentifier</key>
+                    <string>com.example.app-settings</string>
+                    <key>PayloadUUID</key>
+                    <string>Some-Unique-ID-Here-2</string>
+                    <key>PayloadDisplayName</key>
+                    <string>Application Settings</string>
+                    <key>PayloadContent</key>
+                    <dict>
+                        <key>allowScreenShot</key>
+                        <false/>
+                    </dict>
+                </dict>
+            </array>
+        </dict>
+    </array>
+    <key>PayloadDisplayName</key>
+    <string>MDM Profile</string>
+    <key>PayloadIdentifier</key>
+    <string>com.example.mdm-profile</string>
+    <key>PayloadRemovalDisallowed</key>
+    <false/>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>Some-Unique-ID-Here-3</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>
