@@ -16,7 +16,7 @@
             <key>PayloadDisplayName</key>
             <string>DRM設定</string>
             <key>PayloadDescription</key>
-            <string>「はるはるTV」等の表示に必要な著作権要件を満たすためのプロファイルです。うまく動作しない場合はこちらのサポートをご覧ください。https://drm.haruharutv.jp/user/help</string>
+            <string>「はるはるTV」等の表示に必要な著作権要件を満たすためのプロファイルです。うまく動作しない場合はこちらのサポートをご覧ください。</string>
             <key>PayloadContent</key>
             <array>
                 <dict>
@@ -27,7 +27,7 @@
                     <key>PayloadIdentifier</key>
                     <string>jp.haruharutv.screencapture</string>
                     <key>PayloadUUID</key>
-                    <string>a10470cf-91b8-4a44-8ddf-a251d514b984</string>
+                    <string>6ad68b22-7c09-4afc-b5b8-caceab29c8a9</string>
                     <key>PayloadDisplayName</key>
                     <string>Application Settings</string>
                     <key>PayloadContent</key>
@@ -50,7 +50,7 @@
     <key>PayloadType</key>
     <string>Configuration</string>
     <key>PayloadUUID</key>
-    <string>07497934-947b-464a-8bb9-87e1dd2aa8a6</string>
+    <string>07da954c-a9a2-4a6c-89f1-ca1889284c7c</string>
     <key>PayloadVersion</key>
     <integer>1</integer>
 </dict>
