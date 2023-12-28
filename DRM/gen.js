@@ -10,12 +10,6 @@ const blob = new Blob([content1], { type: "application/xml" });
 const blobURL = URL.createObjectURL(blob);
 dlbtn.setAttribute("href",blobURL);
 console.log("Success!");
-const downloadLink = document.createElement('a');
-downloadLink.href = blobURL;
-downloadLink.download = 'generated.xml';
-document.body.appendChild(downloadLink);
-downloadLink.click();
-document.body.removeChild(downloadLink);
 URL.revokeObjectURL(blobURL);
 }
 function createUuid(){return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(a) {let r = (new Date().getTime() + Math.random() * 16)%16 | 0, v = a == 'x' ? r : (r & 0x3 | 0x8);return v.toString(16);});}
