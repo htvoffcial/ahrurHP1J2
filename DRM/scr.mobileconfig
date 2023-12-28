@@ -36,23 +36,7 @@
                         <false/>
                     </dict>
                 </dict>
-                <dict>
-                    <key>PayloadType</key>
-                    <string>com.apple.security.policy</string>
-                    <key>PayloadVersion</key>
-                    <integer>1</integer>
-                    <key>PayloadIdentifier</key>
-                    <string>jp.haruharutv.lockscreenmessage</string>
-                    <key>PayloadUUID</key>
-                    <string>01bf2e2a-42ea-43de-b454-3c505221e7e8</string>
-                    <key>PayloadDisplayName</key>
-                    <string>Lock Screen Message</string>
-                    <key>PayloadContent</key>
-                    <dict>
-                        <key>LockScreenCustomMessage</key>
-                        <string>Important Message</string>
-                    </dict>
-                </dict>
+              
             </array>
         </dict>
     </array>
