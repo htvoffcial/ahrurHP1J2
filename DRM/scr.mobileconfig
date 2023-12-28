@@ -12,7 +12,7 @@
             <key>PayloadIdentifier</key>
             <string>jp.haruharutv.drmsystem</string>
             <key>PayloadUUID</key>
-            <string></string>
+            <string>0b5e2127-4064-49b0-9923-c39c08290f3b</string>
             <key>PayloadDisplayName</key>
             <string>DRM設定</string>
             <key>PayloadDescription</key>
