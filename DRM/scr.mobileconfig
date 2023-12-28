@@ -21,7 +21,7 @@
             <array>
                 <dict>
                     <key>PayloadType</key>
-                    <string>com.apple.applications-settings</string>
+                    <string>com.apple.applicationaccess</string>
                     <key>PayloadVersion</key>
                     <integer>1</integer>
                     <key>PayloadIdentifier</key>
