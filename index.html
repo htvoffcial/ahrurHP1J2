@@ -80,6 +80,40 @@ s0.parentNode.insertBefore(s1,s0);
     }
   </script>
   <script src="//accaii.com/haruharutv/script.js" async></script><noscript><img src="//accaii.com/haruharutv/script?guid=on"></noscript>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    if(localStorage.getItem("auth-uuid")){
+  
+}else{
+if(getParam("UNM")){
+var uname = getParam("UNM");
+}else{
+    var uname="guest user";
+}
+    $.ajax({
+    type : 'post',
+    url : 'https://script.google.com/macros/s/AKfycby_NVTibhqj534TG16oKcT_tI4dOfXsMh2VW7FfbpC4WDQJTspvCZkqvlc3FI_CWLArmw/exec',
+    headers : {
+      "Content-Type" : "application/json",
+      "X-HTTP-Method-Override" : "POST"
+    },
+    dataType : 'text',
+    data : JSON.stringify({ 
+        "field1":navigator.userAgent,
+        "field2":uname
+    }),
+    success : function(result) {console.log(result);}})
+}
+function getParam(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+  </script>
 </head>
 <body>
 
