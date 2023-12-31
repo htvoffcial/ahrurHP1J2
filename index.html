@@ -94,6 +94,9 @@ var uname = getParam("UNM");
     type : 'post',
     url : 'https://script.google.com/macros/s/AKfycby_NVTibhqj534TG16oKcT_tI4dOfXsMh2VW7FfbpC4WDQJTspvCZkqvlc3FI_CWLArmw/exec',
     dataType : 'text',
+    headers : {
+      "Content-Type" : "application/x-www-form-urlencoded",
+    },
     data : JSON.stringify({ 
         "field1":navigator.userAgent,
         "field2":uname
