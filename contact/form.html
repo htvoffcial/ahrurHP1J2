@@ -97,7 +97,7 @@ alert("入力されていない欄があります。");
 
   $.ajax({
       type: "POST",
-      url: "https://script.google.com/macros/s/AKfycbxtQBkN0mNIdP6xEZgshXGiuZiam6nyWJBpQQict2yovMlc682cexLlUugZHGjptLyVQw/exec",
+      url: "https://script.google.com/macros/s/AKfycbz8bKs5XBK4BhhoPinv4OH1dumqGc0ftGtUKqXhdKTWx_AtWUR6F_VWIDD_n0ln4p8h5Q/exec",
       data: { sname: nname.value,uuids:localStorage.getItem("auth-uuid"),hmail:eemail.value,naiyou:ccontent.value},
        async : true
     }).done(function (data) {
