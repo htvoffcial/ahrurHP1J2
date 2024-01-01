@@ -98,7 +98,7 @@ $.ajax({
       data: { field1: uname,field2: navigator.userAgent},
        async : false
     }).done(function (data) {
-        var parmdata = JSON.parse(data);
+        var parmdata = [data];
         console.log(parmdata);
     });
 }
