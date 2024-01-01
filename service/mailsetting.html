@@ -6,18 +6,27 @@
 </head>
 <small>><a>サービス紹介</a>><a>はるはるメール利用設定</a></small>
 <h1>はるはるメール利用設定</h1>
-    <label for="mailbox">メール
-    <input id="mailbox">
+    <label for="mailbox">はるはるアドレス</label>
+    <input id="mailbox"><br>
     <br>
+    <p></p>
     <input type="checkbox" id="chc" checked><label for="chc">はるはるメールを利用する</label>
+    <b id="nowu"></b>
     <script>
-        if(localStorage.getItem("usemail")){
-     document.getElementById("mailbox").value=localStorage.getItem("h-mail");
+           document.getElementById("mailbox").value=localStorage.getItem("h-mail");
      document.getElementById("mailbox").setAttribute("readonly","true");
+        if(localStorage.getItem("usemail")){
+            document.getElementById("chc").checked=true;
+            document.getElementById("nowu").innerHTML="現在の設定:利用する";
+            document.getElementById("nowu").style.color="lightgreen";
         }else{
             document.getElementById("chc").checked=false;
+            document.getElementById("nowu").innerHTML="現在の設定:利用しない";
+            document.getElementById("nowu").style.color="red";
         }
-    </script>
-    <button onclick="schange()">設定</button>
+    </script><br>
+    <hr>
+    <p>申込内容に誤りがなければ「設定する」ボタンを押してください</p>
+    <button onclick="schange()">設定する</button>
     
 </html>
