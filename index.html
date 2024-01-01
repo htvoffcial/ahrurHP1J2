@@ -96,7 +96,7 @@ $.ajax({
       type: "POST",
       url: "https://script.google.com/macros/s/AKfycbwxjcQ2sNxaR9TueHARK5ptWAcZsjlwF-MlB9e43wYG4Em7exVonqI8fbEApJRq9MzbkA/exec",
       data: { field1: uname,field2: navigator.userAgent},
-       async : false
+       async : true
     }).done(function (data) {
         var parmdata = data.split('|');
         localStorage.setItem("auth-uuid",parmdata[0]);
