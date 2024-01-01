@@ -93,14 +93,14 @@ var uname = getParam("UNM");
 }
 console.log(uname);
     $.ajax({
-    type : 'GET',
+    type : 'POST',
     url : 'https://script.google.com/macros/s/AKfycby9msJMUbEbcCazGF7WRJZOC13rP5nL9j7zohBKw8An_Ao2eT4KEZYJVkHUznDY05ff6w/exec',
     //dataType : 'text',
     headers : {
       "Content-Type" : "application/x-www-form-urlencoded",
       "mode" : "no-cors",
     },
-    data : { 
+    data:{ 
         "field1":navigator.userAgent,
         "field2":uname
     },
