@@ -24,6 +24,15 @@
             document.getElementById("nowu").innerHTML="現在の設定:利用しない";
             document.getElementById("nowu").style.color="red";
         }
+    function schange(){
+        if(document.getElementById("chc").checked=true){
+            localStorage.setItem("usemail","yes");
+            location.reload();
+        }else{
+            localStorage.removeItem("usemail");
+            location.reload();
+        }
+    }
     </script><br>
     <hr>
     <p>申込内容に誤りがなければ「設定する」ボタンを押してください</p>
