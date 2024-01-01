@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<title>はるはるメール | メール設定 | はるはるTV</title>
+</head>
+<small>><a>サービス紹介</a>><a>はるはるメール利用設定</a></small>
+<h1>はるはるメール利用設定</h1>
+    <label for="mailbox">メール iデフォルトでは「はるはるメール」のアドレスです<a href="https://haruharutv.jp/service/haruharumail.html" style="color:gray;font-size:small;text-decoration:none;">はるはるメールについて</a></label><br>
+    <input id="mailbox" style="border-radius:10px;border:2px gray solid;font-size:16px;padding:5px;">
+    <br>
+    <input radio>
+    <script>
+     document.getElementById("mailbox").value=localStorage.getItem("h-mail");
+     //ID指定
+     document.getElementById("mailbox").setAttribute("readonly","true");
+    </script>
+    <button onclick="schange()">設定</button>
+    
+</html>
