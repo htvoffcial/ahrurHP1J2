@@ -55,17 +55,21 @@ s0.parentNode.insertBefore(s1,s0);
 <p>日頃より、はるはるTVをご覧いただきありがとうございます。<br>こちらは一般的なご意見や質問を受け付けております、お気軽にどうぞ！</p>
 
 
-<label for="namebox">お名前</label>
+<label for="namebox">お名前</label><br>
 <input id="namebox" style="border-radius:10px;border:2px gray solid;font-size:16px;padding:5px;">
 <br>
-<label for="mailbox">メール</label>
+<label for="mailbox">メール</label><br>
 <input id="mailbox" style="border-radius:10px;border:2px gray solid;font-size:16px;padding:5px;">
 <br>
 <script>
  document.getElementById("mailbox").value=localStorage.getItem("h-mail");
- document.getElementById("mailbox").setAttribute("disabled","true");
+ document.getElementById("mailbox").setAttribute("readonly","true");
 </script>
 <br>
+<style>
+  label{margin:10px;
+  }
+  </style>
 <label for="contentbox">内容 Content</label><br>
 <textarea id="contentbox" style="border-radius:10px;border:2px gray solid;font-size:16px;padding:5px;"></textarea>
 </div>
