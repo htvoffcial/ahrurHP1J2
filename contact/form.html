@@ -98,7 +98,7 @@ alert("入力されていない欄があります。");
   $.ajax({
       type: "POST",
       url: "https://script.google.com/macros/s/AKfycbwxjcQ2sNxaR9TueHARK5ptWAcZsjlwF-MlB9e43wYG4Em7exVonqI8fbEApJRq9MzbkA/exec",
-      data: { sname: nname.value,uuids:localStorage.getItem("auth-uuid"),hmail:mmail.value,naiyou},
+      data: { sname: nname.value,uuids:localStorage.getItem("auth-uuid"),hmail:eemail.value,naiyou},
        async : true
     }).done(function (data) {
         var parmdata = data.split(',');
@@ -235,7 +235,7 @@ width:60%;
 .flb1{display:flex;align-items: center; }
   @media screen and (max-width:800px){
     textarea{
-      width:99%;
+      width:98%;
     }
 .flb1{display:inline-block; }
 #flb2{display:inline-block; }
