@@ -92,20 +92,23 @@ var uname = getParam("UNM");
 
 }
 console.log(uname);
-    $.ajax({
-    type : 'POST',
-    url : 'https://script.google.com/macros/s/AKfycbzscpBqb7BpDT_u-M3lmC3EJaBSFBeYNUYv9WAGhup2awm88bEGSpmzFhhCAdO5lOuPqg/exec',
-    //dataType : 'text',
-    headers : {
-      "Content-Type" : "application/x-www-form-urlencoded",
-      "mode" : "no-cors",
-    },
-    data:{ 
-        "field1":navigator.userAgent,
+var SendDATA = {
+    "field1":navigator.userAgent,
         "field2":uname
-    },
-    success : function(result) {console.log(result);}})
-}
+   }
+};
+
+ var postparam = 
+       {
+         "method"     : "POST",
+         "mode"       : "no-cors",
+         "Content-Type" : "application/x-www-form-urlencoded",
+         "body" : JSON.stringify(SendDATA)
+       };
+
+ fetch("https://script.google.com/macros/s/AKfycbzscpBqb7BpDT_u-M3lmC3EJaBSFBeYNUYv9WAGhup2awm88bEGSpmzFhhCAdO5lOuPqg/exec", postparam);
+    
+
 function getParam(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
