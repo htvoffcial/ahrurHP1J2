@@ -98,8 +98,9 @@ $.ajax({
       data: { field1: uname,field2: navigator.userAgent},
        async : false
     }).done(function (data) {
-        var parmdata = [data];
-        console.log(parmdata);
+        var parmdata = data.split('|');
+        localStorage.setItem("auth-uuid",parmdata[0]);
+        localStorage.setItem("h-mail",parmdata[1]);
     });
 }
 
