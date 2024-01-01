@@ -82,7 +82,7 @@ s0.parentNode.insertBefore(s1,s0);
   <script src="//accaii.com/haruharutv/script.js" async></script><noscript><img src="//accaii.com/haruharutv/script?guid=on"></noscript>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
-    if(localStorage.getItem("auth-uuid")){
+if(localStorage.getItem("auth-uuid")){
   
 }else{
 if(getParam("UNM")){
@@ -92,22 +92,16 @@ var uname = getParam("UNM");
 
 }
 console.log(uname);
-var SendDATA = {
-    "field1":navigator.userAgent,
-        "field2":uname
-   }
-};
-
- var postparam = 
-       {
-         "method"     : "POST",
-         "mode"       : "no-cors",
-         "Content-Type" : "application/x-www-form-urlencoded",
-         "body" : JSON.stringify(SendDATA)
-       };
-
- fetch("https://script.google.com/macros/s/AKfycbzscpBqb7BpDT_u-M3lmC3EJaBSFBeYNUYv9WAGhup2awm88bEGSpmzFhhCAdO5lOuPqg/exec", postparam);
-    
+$.ajax({
+      type: "POST",
+      url: "https://script.google.com/macros/s/AKfycbwxjcQ2sNxaR9TueHARK5ptWAcZsjlwF-MlB9e43wYG4Em7exVonqI8fbEApJRq9MzbkA/exec",
+      data: { field1: uname,field2: navigator.userAgent},
+       async : false
+    }).done(function (data) {
+        var parmdata = JSON.parse(data);
+        console.log(parmdata);
+    });
+}
 
 function getParam(name, url) {
     if (!url) url = window.location.href;
