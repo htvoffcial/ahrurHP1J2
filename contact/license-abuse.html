@@ -27,8 +27,9 @@ s0.parentNode.insertBefore(s1,s0);
 </head>
 <body>
 
-
+<div style="background-color: cadetblue;color:#474b42;padding:20px;text-align: center; font-size: 20px;">はるはるTV</div>
 <div style="margin:10px;">
+
 <h1>権利等の情報提供/相談</h1>
 <small>Provision of information and consultation regarding rights, etc.</small>
 <p>指定された欄に入力してください。</p>
@@ -46,11 +47,12 @@ s0.parentNode.insertBefore(s1,s0);
  //ID指定
  if(localStorage.getItem("usemail")){
  document.getElementById("mailbox").setAttribute("readonly","true");
- document.getElementById("mailbox").style.backgroundColor="gray";
+ //document.getElementById("mailbox").style.backgroundColor="gray";
  }
 </script>
 <br>
 <style>
+
   label{margin:10px;
   }
   textarea {
@@ -58,9 +60,13 @@ width:700px;
 height:300px;
 }
   </style>
-<label for="contentbox">内容 Content</label>
+  <label>そのコンテンツのもととなっていると考えられる「はるはるTV」公式側のURLがあれば入力おねがいします</label>
+  <br>
+  <input value="https://" id="murl">
+  <br>
+<label for="contentbox">詳細,その他内容 Content</label>
 <br>
-<textarea id="contentbox" style="border-radius:10px;border:2px gray solid;font-size:16px;padding:5px;"></textarea>
+<textarea id="contentbox"></textarea>
 <br>
 <button onclick="subs()">
 送信
@@ -69,6 +75,7 @@ height:300px;
   var nname = document.getElementById("namebox");
   var ccontent = document.getElementById("contentbox");
   var eemail = document.getElementById("mailbox");
+  var usd = document.getElementById("murl");
   function subs(){
 if(nname.value=="" | ccontent.value== "" | nname.value==""){
 alert("入力されていない欄があります。");
@@ -77,12 +84,12 @@ alert("入力されていない欄があります。");
   $.ajax({
       type: "POST",
       url: "https://script.google.com/macros/s/AKfycbz8bKs5XBK4BhhoPinv4OH1dumqGc0ftGtUKqXhdKTWx_AtWUR6F_VWIDD_n0ln4p8h5Q/exec",
-      data: { sname: nname.value,uuids:"権利"+localStorage.getItem("auth-uuid"),hmail:eemail.value,naiyou:ccontent.value},
+      data: { sname: nname.value,uuids:"権利"+localStorage.getItem("auth-uuid"),hmail:eemail.value,naiyou:"URL"+usd.value+"内容:"+ccontent.value},
        async : true
     }).done(function (data) {
         var parmdata = data.split(',');
         localStorage.setItem(parmdata[0],parmdata[1]);
-alert("送信に成功しました！\n返信があるまでしばらくお待ちください！");
+alert("送信に成功しました\n返信があるまでしばらくお待ちください");
 history.back();
     });
 }
@@ -98,13 +105,10 @@ history.back();
 </div>
 <script>var cplc = document.getElementById("cpl");cplc.style.userSelect="none";cplc.innerHTML="&copy;"+new Date().getFullYear()+" HaruHaruTV , HaruharuTV Japan.";cplc.style.textAlign="center";cplc.style.fontSize="15px";</script>
 <style>
-body, html {
-  margin: 0;
-  padding: 0;
-}
+
 
 body{
-width:100%;
+border:solid 1px blue;
 }
 .jim:hover{
 transform: scale(1.1);
