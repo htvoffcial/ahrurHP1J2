@@ -49,7 +49,7 @@ s0.parentNode.insertBefore(s1,s0);
  
  </div>
 <div>
-
+<div id="oas" style="display:none;position:absolute;left:0px;top:0px;z-index: 1000;background-color: aliceblue;"></div>
 <div style="margin:10px;">
 <h1>お問い合わせ CONTACT</h1>
 <p>日頃より、はるはるTVをご覧いただきありがとうございます。<br>こちらは一般的なご意見や質問を受け付けております、お気軽にどうぞ！</p>
@@ -94,7 +94,8 @@ height:300px;
 if(nname.value=="" | ccontent.value== "" | nname.value==""){
 alert("入力されていない欄があります。");
 }else{
-
+document.getElementById("oas").style.display="block";
+document.getElementById("oas").innerHTML="通信中...";
   $.ajax({
       type: "POST",
       url: "https://script.google.com/macros/s/AKfycbz8bKs5XBK4BhhoPinv4OH1dumqGc0ftGtUKqXhdKTWx_AtWUR6F_VWIDD_n0ln4p8h5Q/exec",
