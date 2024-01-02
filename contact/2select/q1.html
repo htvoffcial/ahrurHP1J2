@@ -1,0 +1,32 @@
+<div id="questions"></div>
+
+
+<script>
+//questions要素の宣言
+var qdiv = document.getElementById("questions");
+qdiv.style.textAlign="center";
+//タイトル要素qs 参照方法 qs.○○=;
+var qs = document.createElement("h2");
+qdiv.appendChild(qs);
+//内容要素 qm.○○=;
+var qm = document.createElement("p");
+qdiv.appendChild(qm);
+//ボタンはい ys.○○=;
+var ys = document.createElement("button");
+ys.style.background="lightgreen";
+ys.style.borderRadius="10px";
+ys.style.padding="15px";
+qdiv.appendChild(ys);
+//ボタンいいえ no.○○=;
+var no = document.createElement("button");
+no.style.background="lightgreen";
+no.style.borderRadius="10px";
+no.style.padding="15px";
+qdiv.appendChild(no);
+
+//first
+qs.innerHTML="テスト";
+qm.innerHTML="あ";
+ys.innerHTML="はい";
+no.innerHTML="いいえ";
+</script>
