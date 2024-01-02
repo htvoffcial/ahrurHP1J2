@@ -83,10 +83,11 @@ height:300px;
 <br>
 <textarea id="contentbox" style="border-radius:10px;border:2px gray solid;font-size:16px;padding:5px;"></textarea>
 <br>
-<button onclick="subs()">
+<button onclick="subs()" style="border-radius:10px;border:2px gray solid;font-size:16px;padding:5px;">
 送信
 </button>
 <script>
+  document.getElementById("oas").style.display="none";
   var nname = document.getElementById("namebox");
   var ccontent = document.getElementById("contentbox");
   var eemail = document.getElementById("mailbox");
