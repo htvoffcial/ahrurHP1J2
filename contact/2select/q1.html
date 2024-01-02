@@ -28,8 +28,25 @@ no.style.marginLeft="10px";
 qdiv.appendChild(no);
 
 //first
-qs.innerHTML="テスト";
-qm.innerHTML="あ";
+qs.innerHTML="はるはるTVへのご質問・ご意見ですか？";
+qm.innerHTML="はるはるTVの番組やサイトへの質問・意見の場合は「はい」、他の事業者への質問等は「いいえ」";
 ys.innerHTML="はい";
+ys.onclick="pattern1()";
 no.innerHTML="いいえ";
+ys.onclick="pattern2()";
+
+function pattern1(){
+ys.style.display="none";
+no.style.display="none";
+qs.innerHTML="はるはるTV以外の事業者";
+qm.innerHTML="はるはるTV以外の事業者については、原則として<b>「はるはるTVと一切連携しておらず」</b>自己責任での問い合わせとなります。<br>以下にはるはるTVのサービスと類似のサービスを提供している事業者を示します。<h3>テレビ放送関係</h3><p>NHK 日本放送協会</p><h3>総合的なサービス</h3><p>総務省</p><b>はるはる</b>";
+}
+function pattern2(){
+qs.innerHTML="";
+qm.innerHTML="はるはるTVの番組やサイトへの質問・意見の場合は「はい」、他の事業者への質問等は「いいえ」";
+ys.innerHTML="はい";
+ys.onclick="pattern1()";
+no.innerHTML="いいえ";
+ys.onclick="pattern2()";
+}
 </script>
