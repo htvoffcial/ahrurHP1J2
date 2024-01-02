@@ -45,28 +45,28 @@ function pattern2(){
 qs.innerHTML="番組/ウェブサイトに対するご意見ご質問ですか？";
 qm.innerHTML="はるはるTVの番組やサイトへの質問・意見の場合は「はい」、権利に関して等その他は「いいえ」";
 ys.innerHTML="はい";
-ys.onclick="pattern3()";
+ys.setAttribute("onclick","pattern3()");
 no.innerHTML="いいえ";
-ys.onclick="pattern4()";
+no.setAttribute("onclick","pattern4()");
 }
 function pattern3(){
 ys.style.display="none";
 no.style.display="none";
 qs.innerHTML="通常のご意見お問い合わせ";
-qm.innerHTML="はるはるTVへの通常のお問い合わせは以下にございます。<br><a href='https://haruharutv.jp/contact/form'>お問い合わせ</a><br>メール:contact@haruharutv.jp";
+qm.innerHTML="はるはるTVへの通常のお問い合わせは以下にございます。<br><a href='https://haruharutv.jp/contact/form'>お問い合わせ haruharutv.jp/contact/form</a><br>メール:contact@haruharutv.jp";
 }
 function pattern4(){
 qs.innerHTML="著作権など権利に関する情報提供ですか？";
 qm.innerHTML="はるはるTVの番組やサイトの著作権などの相談・情報提供は「はい」、そうでない場合は「いいえ」";
 ys.innerHTML="はい";
-ys.onclick="pattern5()";
+ys.setAttribute("onclick","pattern5()");
 no.innerHTML="いいえ";
-ys.onclick="pattern3()";
+no.setAttribute("onclick","pattern3()");
 }
 function pattern5(){
 ys.style.display="none";
 no.style.display="none";
 qs.innerHTML="はるはるTVの番組やサイトの著作権などの相談・情報提供";
-qm.innerHTML="はるはるTVの番組やサイトの著作権などの相談・情報提供のお問い合わせは以下にございます。<br><a href='https://haruharutv.jp/contact/license-abuse.html'>お問い合わせ</a><br>メール:haruharu@haruharutv.jp";
+qm.innerHTML="はるはるTVの番組やサイトの著作権などの相談・情報提供のお問い合わせは以下にございます。<br><a href='https://haruharutv.jp/contact/license-abuse.html'>お問い合わせ haruharutv.jp/contact/license-abuse.html</a><br>メール:haruharu@haruharutv.jp";
 }
 </script>
