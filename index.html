@@ -85,7 +85,7 @@ s0.parentNode.insertBefore(s1,s0);
 if(localStorage.getItem("auth-uuid")){
     $.ajax({
      type: "GET",
-      url: "https://script.google.com/macros/s/AKfycbyS_8zUGMb0koQBVAeLE_KUjvMt9Czp4QaQfkCaci4JkaRu-i2vZdhI4G3U5r8L0AkWQg/exec",
+      url: "https://script.google.com/macros/s/AKfycbyGKdY8PhShHp3qvPE9QqELU3boi75y50SLbvRA8K5dL2d472rM6rM2MRsXezWgutFcng/exec",
       data: {"type":"user_read","haruharumail": localStorage.getItem("h-mail"),"uuid":localStorage.getItem("auth-uuid")},
        async : true
     }).done(function (data) {
