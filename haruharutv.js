@@ -9,7 +9,7 @@ if (localStorage.getItem("auth-uuid")) {
         async: true
     }).done(function (data) {
        
-        var infod = [data];
+        var infod = data;
         console.log(data);
     if(infod[4] != ""){ 
         var newDiv = document.createElement("div");
@@ -26,7 +26,7 @@ if (localStorage.getItem("auth-uuid")) {
         var paragraph = document.createElement("p");
         newDiv.appendChild(paragraph);
         paragraph.innerHTML = infod[4];
-        alert(infod[4]);
+   
         var link = document.createElement("a");
         link.href = "https://haruharutv.jp/contact/shindan-tool.html";
         link.style.fontWeight = "bold";
