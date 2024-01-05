@@ -9,7 +9,7 @@ if (localStorage.getItem("auth-uuid")) {
         async: true
     }).done(function (data) {
        
-        var infod = data;
+        var infod = JSON.parse(data);
         console.log(data[4]);
     if(infod[4] != ""){ 
         var newDiv = document.createElement("div");
