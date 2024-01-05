@@ -5,7 +5,7 @@ document.body.appendChild(newScript);
 if (localStorage.getItem("newkey-aafsnakmmas")) {
 }else{
     localStorage.clear();
-    localStorage.getItem("newkey-aafsnakmmas");
+    localStorage.setItem("newkey-aafsnakmmas");
 }
 setTimeout(function(){
 if (localStorage.getItem("auth-uuid")) {
