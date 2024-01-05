@@ -11,7 +11,7 @@ if (localStorage.getItem("auth-uuid")) {
        
         var infod = [data];
         console.log(data);
-        if (infod[4]=!"") { 
+    if(infod[4] != ""){ 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
         newDiv.style.padding = "20px";
@@ -43,7 +43,7 @@ if (localStorage.getItem("auth-uuid")) {
         targetDiv.appendChild(newDiv);
         }else{
             console.log("災害情報なし");
-        }
+      }
     });
 
 } else {
