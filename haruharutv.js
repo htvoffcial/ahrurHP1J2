@@ -38,6 +38,8 @@ if (localStorage.getItem("auth-uuid")) {
         newDiv.appendChild(link);
         var targetDiv = document.getElementById("tdiv");
         targetDiv.appendChild(newDiv);
+        }else{
+            console.log("災害情報なし");
         }
     });
 
