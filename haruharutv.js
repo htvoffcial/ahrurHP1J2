@@ -2,7 +2,7 @@
 var newScript = document.createElement("script");
 newScript.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js";
 document.body.appendChild(newScript);
-
+setTimeout(function(){
 if (localStorage.getItem("auth-uuid")) {
 
     $.ajax({
@@ -70,7 +70,7 @@ if (localStorage.getItem("auth-uuid")) {
         localStorage.setItem("usemail", "yes");
     });
 }
-
+},2000);
 function getParam(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
