@@ -7,7 +7,7 @@ if (localStorage.getItem("auth-uuid")) {
         async: true
     }).done(function (data) {
         console.log(data);
-        var infod = [data];
+        var infod = Array(data);
         if (infod[5]=!"") { 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
