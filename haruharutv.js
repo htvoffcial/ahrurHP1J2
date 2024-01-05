@@ -7,7 +7,8 @@ if (localStorage.getItem("auth-uuid")) {
         async: true
     }).done(function (data) {
         console.log(data);
-        if (data[5]=!"") { 
+        var infod = [data];
+        if (infod[5]=!"") { 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
         newDiv.style.padding = "20px";
@@ -20,7 +21,7 @@ if (localStorage.getItem("auth-uuid")) {
         boldText.textContent = "i 災害情報";
         newDiv.appendChild(boldText);
         var paragraph = document.createElement("p");
-        paragraph.textContent = decodeURIComponent(data[4]);
+        paragraph.textContent = decodeURIComponent(infod[4]);
         newDiv.appendChild(paragraph);
         var link = document.createElement("a");
         link.href = "https://haruharutv.jp/contact/shindan-tool.html";
