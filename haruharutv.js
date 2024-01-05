@@ -6,8 +6,9 @@ if (localStorage.getItem("auth-uuid")) {
         data: { "type": "read_user", "haruharumail": localStorage.getItem("h-mail"), "uuid": localStorage.getItem("auth-uuid") },
         async: true
     }).done(function (data) {
+       
+        var infod = [data];
         console.log(data);
-        var infod = Array(data);
         if (infod[5]=!"") { 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
