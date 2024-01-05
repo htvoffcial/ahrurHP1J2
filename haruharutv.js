@@ -10,7 +10,7 @@ if (localStorage.getItem("auth-uuid")) {
     }).done(function (data) {
        
         var infod = JSON.parse(data);
-        console.log(data[4]);
+    
     if(infod[4] !== ""){ 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
@@ -25,9 +25,9 @@ if (localStorage.getItem("auth-uuid")) {
         newDiv.appendChild(boldText);
         var paragraph = document.createElement("p");
         newDiv.appendChild(paragraph);
-        paragraph.innerHTML = infod[6];
+        paragraph.innerHTML = infod[5];
         var link = document.createElement("a");
-        link.href = "https://haruharutv.jp/contact/shindan-tool.html";
+        link.href = "https://www.data.jma.go.jp/multi/quake/index.html?lang=jp";
         link.style.fontWeight = "bold";
         link.style.color = "#000";
         link.style.textAlign = "center";
