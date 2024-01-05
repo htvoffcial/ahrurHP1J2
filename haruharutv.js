@@ -20,7 +20,7 @@ if (localStorage.getItem("auth-uuid")) {
         boldText.textContent = "i 災害情報";
         newDiv.appendChild(boldText);
         var paragraph = document.createElement("p");
-        paragraph.textContent = decodeURIComponent(data[4].replace(/|/g, "<br>"));
+        paragraph.textContent = decodeURIComponent(data[4]);
         newDiv.appendChild(paragraph);
         var link = document.createElement("a");
         link.href = "https://haruharutv.jp/contact/shindan-tool.html";
