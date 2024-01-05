@@ -25,7 +25,8 @@ if (localStorage.getItem("auth-uuid")) {
         newDiv.appendChild(boldText);
         var paragraph = document.createElement("p");
         newDiv.appendChild(paragraph);
-        paragraph.innerHTML = infod[4].replace(/"/g, '').replace(/|/g, '<br>');
+        var displayinfo = infod[4].replace(/"/g, '');
+        paragraph.innerHTML = displayinfo.replace(/|/g, '<br>');
         var link = document.createElement("a");
         link.href = "https://www.data.jma.go.jp/multi/quake/index.html?lang=jp";
         link.style.fontWeight = "bold";
