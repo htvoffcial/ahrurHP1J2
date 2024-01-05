@@ -1,5 +1,7 @@
 
+var infod;
 if (localStorage.getItem("auth-uuid")) {
+
     $.ajax({
         type: "GET",
         url: "https://script.google.com/macros/s/AKfycbyGKdY8PhShHp3qvPE9QqELU3boi75y50SLbvRA8K5dL2d472rM6rM2MRsXezWgutFcng/exec",
@@ -7,7 +9,7 @@ if (localStorage.getItem("auth-uuid")) {
         async: true
     }).done(function (data) {
        
-        var infod = [data];
+         infod = [data];
         console.log(data);
         if (infod[4]=!"") { 
         var newDiv = document.createElement("div");
