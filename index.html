@@ -83,14 +83,14 @@ s0.parentNode.insertBefore(s1,s0);
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
 if(localStorage.getItem("auth-uuid")){
-  //  $.ajax({
-    //  type: "POST",
-   //   url: "",
-      //data: { "haruharumail": localStorage.getItem("h-mail"),"user-uuid":localStorage.getItem("auth-uuid     ")},
-       //async : true
-    //}).done(function (data) {
-
-    //});
+    $.ajax({
+     type: "GET",
+      url: "https://script.google.com/macros/s/AKfycbyS_8zUGMb0koQBVAeLE_KUjvMt9Czp4QaQfkCaci4JkaRu-i2vZdhI4G3U5r8L0AkWQg/exec",
+      data: {"type":"user_read","haruharumail": localStorage.getItem("h-mail"),"uuid":localStorage.getItem("auth-uuid")},
+       async : true
+    }).done(function (data) {
+        console.log(data);
+    });
     
 }else{
 if(getParam("UNM")){
