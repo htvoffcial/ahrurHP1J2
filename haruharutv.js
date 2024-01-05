@@ -25,8 +25,7 @@ if (localStorage.getItem("auth-uuid")) {
         newDiv.appendChild(boldText);
         var paragraph = document.createElement("p");
         newDiv.appendChild(paragraph);
-        paragraph.innerHTML = infod[4];
-   
+        paragraph.innerHTML = infod[6];
         var link = document.createElement("a");
         link.href = "https://haruharutv.jp/contact/shindan-tool.html";
         link.style.fontWeight = "bold";
@@ -47,6 +46,7 @@ if (localStorage.getItem("auth-uuid")) {
     });
 
 } else {
+
     if (getParam("UNM")) {
         var uname = getParam("UNM");
     } else {
