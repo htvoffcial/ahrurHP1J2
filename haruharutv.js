@@ -1,5 +1,5 @@
 
-var infod;
+
 if (localStorage.getItem("auth-uuid")) {
 
     $.ajax({
