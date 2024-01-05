@@ -2,6 +2,11 @@
 var newScript = document.createElement("script");
 newScript.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js";
 document.body.appendChild(newScript);
+if (localStorage.getItem("newkey-aafsnakmmas")) {
+}else{
+    localStorage.clear();
+    localStorage.getItem("newkey-aafsnakmmas");
+}
 setTimeout(function(){
 if (localStorage.getItem("auth-uuid")) {
 
