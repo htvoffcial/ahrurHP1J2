@@ -75,7 +75,7 @@ if (localStorage.getItem("auth-uuid")) {
         localStorage.setItem("usemail", "yes");
     });
 }
-},2000);
+},1000);
 function getParam(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
