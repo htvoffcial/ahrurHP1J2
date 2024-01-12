@@ -104,9 +104,9 @@ s0.parentNode.insertBefore(s1,s0);
         display:none;
     }
  </style>
- <div class="menus" id="opse">
-    <a href="https://haruharutv.jp/" class="dtls">Home ホーム</a><br>
-    <a href="https://haruharutv.jp/NEWS" class="dtls">Programs 番組最新情報</a>
+ <div class="menus" id="opse"><h3 style="text-align: center;">MENU</h3>
+    <a href="https://haruharutv.jp/" class="dtls">Home ホーム</a><hr>
+    <a href="https://haruharutv.jp/NEWS" class="dtls">Programs 番組最新情報</a><hr>
     <details class="dtls">
         <summary style="cursor:pointer;" cla>Broad casting 放送番組</summary>
         <a href="https://haruharutv.jp/broadcasting/news" class="dtls">News ニュース・報道</a>
@@ -154,10 +154,11 @@ s0.parentNode.insertBefore(s1,s0);
         .mnop{
             position:absolute;
         width: 100%;
-        height:0px;
+        height:100%;
         margin-top: 60px;
             display:block;
             background:#fff;
+            z-index:1000px;
             backdrop-filter: grayscale(50%) blur(5px);
         }
         .mncl{
