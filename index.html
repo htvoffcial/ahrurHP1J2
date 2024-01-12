@@ -86,14 +86,16 @@ s0.parentNode.insertBefore(s1,s0);
 
 <div class="topbox">
       <img src="https://haruharutv.jp/lling.png" class="tlg" alt="画面上部のロゴ「はるはるTV」">
- 
+      <button class="btn-menu" type="button">
+        <i class="btn-menu__bars" aria-hidden="true"></i>
+    </button>
  </div>
  <div id="tdiv"></div>
 <script src="https://haruharutv.jp/script/lib/haruharutv/1.1.1/haruharutv.min.js"></script>
 <div>
 
     <loadbox id="lb">
-        <img src="lgas.png" class="lglb" alt="読み込み中画面のロゴ「はるはるTV」">
+        <img src="lgas.png" class="lglb" style="display:flex;" alt="読み込み中画面のロゴ「はるはるTV」">
         </loadbox>
         <style>
 @import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&display=swap);lite-youtube{background-color:#000;position:relative;display:block;contain:content;background-position:center center;background-size:cover;cursor:pointer;max-width:720px}lite-youtube::before{content:'';display:block;position:absolute;top:0;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);background-position:top;background-repeat:repeat-x;height:60px;padding-bottom:50px;width:100%;transition:all 0.2s cubic-bezier(0,0,.2,1)}lite-youtube::after{content:"";display:block;padding-bottom:calc(100% / (16 / 9))}lite-youtube>iframe{width:100%;height:100%;position:absolute;top:0;left:0;border:0}lite-youtube>.lty-playbtn{display:block;width:68px;height:48px;position:absolute;cursor:pointer;transform:translate3d(-50%,-50%,0);top:50%;left:50%;z-index:1;background-color:transparent;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 68 48"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="red"/><path d="M45 24 27 14v20" fill="white"/></svg>');filter:grayscale(100%);transition:filter .1s cubic-bezier(0,0,.2,1);border:none}lite-youtube:hover>.lty-playbtn,lite-youtube .lty-playbtn:focus{filter:none}lite-youtube.lyt-activated{cursor:unset}lite-youtube.lyt-activated::before,lite-youtube.lyt-activated>.lty-playbtn{opacity:0;pointer-events:none}.lyt-visually-hidden{clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px}.lglb{position:absolute;top:50%;left:50%;transform:translateX(-50%)translateY(-50%);height:200px}body{font-family:'IBM Plex Sans JP',sans-serif;font-display:swap}#lb{-moz-transition:1s ease;-webkit-transition:1s ease;transition:0.8s ease;position:absolute;z-index:100;height:100%;width:100%;top:0;left:0;background:#fff}.aft{animation:opc 0.3s ease-out forwards}@keyframes opc{0%{opacity:1}100%{opacity:0;visibility:hidden}}
@@ -102,13 +104,20 @@ s0.parentNode.insertBefore(s1,s0);
             window.onload=function(){
                 document.getElementById("lb").className="aft";
             }
+            var btnMenu = document.getElementsByClassName("btn-menu");
+var body = document.body
+for (var i = 0; i < btnMenu.length; i++) {
+    btnMenu[i].addEventListener('click', function () {
+        body.classList.toggle('menu-open');
+    });
+}
         </script>
 <img src="" class="slid" id="sldd" alt="トップページの大きな画像">
 </div>
 <script>
 class LiteYTEmbed extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute('videoid');let playBtnEl=this.querySelector('.lty-playbtn');this.playLabel=(playBtnEl&&playBtnEl.textContent.trim())||this.getAttribute('playlabel')||'Play';if(!this.style.backgroundImage){this.style.backgroundImage=`url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg")`} if(!playBtnEl){playBtnEl=document.createElement('button');playBtnEl.type='button';playBtnEl.classList.add('lty-playbtn');this.append(playBtnEl)} if(!playBtnEl.textContent){const playBtnLabelEl=document.createElement('span');playBtnLabelEl.className='lyt-visually-hidden';playBtnLabelEl.textContent=this.playLabel;playBtnEl.append(playBtnLabelEl)} this.addEventListener('pointerover',LiteYTEmbed.warmConnections,{once:!0});this.addEventListener('click',this.addIframe)} static addPrefetch(kind,url,as){const linkEl=document.createElement('link');linkEl.rel=kind;linkEl.href=url;if(as){linkEl.as=as} document.head.append(linkEl)} static warmConnections(){if(LiteYTEmbed.preconnected)return;LiteYTEmbed.addPrefetch('preconnect','https://www.youtube-nocookie.com');LiteYTEmbed.addPrefetch('preconnect','https://www.google.com');LiteYTEmbed.addPrefetch('preconnect','https://googleads.g.doubleclick.net');LiteYTEmbed.addPrefetch('preconnect','https://static.doubleclick.net');LiteYTEmbed.preconnected=!0} addIframe(e){if(this.classList.contains('lyt-activated'))return;e.preventDefault();this.classList.add('lyt-activated');const params=new URLSearchParams(this.getAttribute('params')||[]);params.append('autoplay','1');const iframeEl=document.createElement('iframe');iframeEl.width=560;iframeEl.height=315;iframeEl.title=this.playLabel;iframeEl.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';iframeEl.allowFullscreen=!0;iframeEl.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${params.toString()}`;this.append(iframeEl);iframeEl.focus()}} customElements.define('lite-youtube',LiteYTEmbed);function TigilError(){return!0} window.onerror=TigilError;var sldelem=document.getElementById("sldd");var imgsrcs=["https://media-uploader.work/?mode=dl&id=11277&original=1&key=08154451-322b-4990-8d6d-c911ddb0df2e","https://media-uploader.work/?mode=dl&id=11278&original=1&key=ceac54ca-2f20-4242-a4f0-80e27c3c3e27"]; var icount=0;sldelem.src=imgsrcs[0];setInterval(function(){if(icount==imgsrcs.length-1){sldelem.src=imgsrcs[icount];icount=0}else{sldelem.src=imgsrcs[icount];icount++}},15000)
 </script>
-<style>.slid{width:100%;}</style>
+<style>.slid{width:100%;}.topbox{width:100%; display: flex;align-items: center;}</style>
 <div class="infomations">
 <div style="font-weight:bold;color:#191970;font-size:20px;">i お知らせ</div>
 現在お知らせはありません
@@ -191,6 +200,76 @@ Tawk: <a href="https://tawk.to/haruharutv" style="transition:all 3s ease;color:#
 </div>
 <script>var cplc = document.getElementById("cpl");cplc.style.userSelect="none";cplc.innerHTML="&copy;"+new Date().getFullYear()+" HaruHaruTV , HaruharuTV Japan.";cplc.style.textAlign="center";cplc.style.fontSize="15px";</script>
 <style>
+    .btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 31px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.3s ease;
+    right:0px;
+}
+
+.btn-menu:focus {
+    outline: none;
+}
+
+.btn-menu__text {
+    margin-left: 10px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.btn-menu__bars {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 5px;
+    background-color: gray;
+    transition: 0.3s;
+    border-radius:2px;
+}
+
+.btn-menu__bars:before,
+.btn-menu__bars:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: 0.3s;
+    border-radius:2px;
+}
+
+.btn-menu__bars:before {
+    transform: translate(0, -13px);
+}
+
+.btn-menu__bars:after {
+    transform: translate(0, 13px);
+}
+
+.menu-open .btn-menu__bars {
+    background-color: transparent;
+}
+
+.menu-open .btn-menu__bars:before {
+    transform: rotate(45deg);
+}
+
+.menu-open .btn-menu__bars:after {
+    transform: rotate(-45deg);
+}
+
 body,html{margin:0;padding:0}body{width:100%}.jim:hover{transform:scale(1.1)}.jim:active{transform:scale(10);filter:blur(100px)}.fade{opacity:0;transform:translateY(30px);transition:opacity 1.5s,transform 1s}.fade.active{opacity:1;transform:translateY(0)}.g1{background:#000;color:#fff;display:flex}#flb2{margin-left:20px;display:flex;font-size:10px;align-items:center;text-align:left}.infomations{margin-top:10px;border-radius:15px;padding:12px;border-top:10px orange solid;border-left:5px orange solid;border-right:5px orange solid;border-bottom:5px orange solid}.cb1{text-align:right}.tlg{margin:5px 20px 5px 5px;height:50px}.topbox{transition:all 3s ease;position:relatitve;left:0;width:100%;height:70px;box-shadow:0 2px 2px 0 gainsboro,inset 0 -1px 6px -2px cadetblue}#flb{display:flex;flex-direction:row}#cpl{margin-top:15px}lite-youtube{width:60%}.flb1{display:flex;align-items:center}@media screen and (max-width:800px){.flb1{display:inline-block}#flb2{display:inline-block}.g1{display:inline-block;width:100%}lite-youtube{width:100%}.topbox{width:100%;text-align:center}.tlg{margin:8px -15px 10px 10px;height:50px;text-align:center}#flb{display:inline-block}}
 
 .logo{width:200px;}.bottomb{position:absolute;left:0px;background-color: #474b42; width:calc(100% - 80px);padding:40px;text-align:center;}</style>
