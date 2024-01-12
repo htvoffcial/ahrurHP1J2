@@ -80,7 +80,15 @@ s0.parentNode.insertBefore(s1,s0);
   </script>
   <script src="//accaii.com/haruharutv/script.js" async></script><noscript><img src="//accaii.com/haruharutv/script?guid=on"></noscript>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  
+  <script>
+    const botUserAgentSubstring = "bingbot";
+window.onload = function() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.includes(botUserAgentSubstring)) {
+        document.title = "はるはるTV | はるはるTVの公式サイト";
+    }
+};
+    </script>
 </head>
 <body>
 
