@@ -1,15 +1,7 @@
 <script>
-  var targets = document.getElementsByClassName('fade');
-for(let i = targets.length; i--;){
- let observer = new IntersectionObserver((entries, observer) => {
-  for(let j = entries.length; j--;){
-   if (entries[j].isIntersecting) {
-    entries[j].target.classList.add('active');
-   } else{
-    entries[j].target.classList.remove('active');
-   }
-  }
- });
- observer.observe(targets[i]);
-}
+
+const url = location.href;
+const searchParams = new URL(url).searchParams;
+
+location.href="https://cse.google.com/cse?cx=d4f9fa8fcf4de4f5a#gsc.q="+searchParams.get("q");
 </script>
