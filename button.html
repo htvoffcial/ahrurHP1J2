@@ -1,0 +1,83 @@
+
+<button class="btn-menu" type="button">
+    <i class="btn-menu__bars" aria-hidden="true"></i>
+</button>
+<script>
+    var btnMenu = document.getElementsByClassName("btn-menu");
+var body = document.body
+for (var i = 0; i < btnMenu.length; i++) {
+    btnMenu[i].addEventListener('click', function () {
+        body.classList.toggle('menu-open');
+    });
+}
+    </script>
+    <style>
+.btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 31px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-menu:focus {
+    outline: none;
+}
+
+.btn-menu__text {
+    margin-left: 10px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.btn-menu__bars {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 5px;
+    background-color: gray;
+    transition: 0.3s;
+    border-radius:2px;
+}
+
+.btn-menu__bars:before,
+.btn-menu__bars:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: 0.3s;
+    border-radius:2px;
+}
+
+.btn-menu__bars:before {
+    transform: translate(0, -13px);
+}
+
+.btn-menu__bars:after {
+    transform: translate(0, 13px);
+}
+
+.menu-open .btn-menu__bars {
+    background-color: transparent;
+}
+
+.menu-open .btn-menu__bars:before {
+    transform: rotate(45deg);
+}
+
+.menu-open .btn-menu__bars:after {
+    transform: rotate(-45deg);
+}
+
+</style>
