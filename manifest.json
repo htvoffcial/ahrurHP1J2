@@ -3,7 +3,7 @@
 "short_name": "はるはるTV",
 "start_url": "/",
 "display": "standalone",
-"description": "はるはるTVの公式サイトのWebアプリ。",
+"description": "はるはるTVの公式サイトのWebアプリ。ニュース・報道、番組の最新情報などを最速でお届け！",
 "lang": "ja",
 "dir": "auto",
 "theme_color": "#ffffff",
@@ -28,7 +28,7 @@
         "src": "assets/haruharutv.jp_(Nest Hub Max).png",
         "sizes": "2880x1800",
         "type": "image/png",
-        "description": "A screenshot of the home page"
+        "description": "はるはるTVの公式サイトのWebアプリ。"
     }
 ],
 "prefer_related_applications": false,
@@ -36,6 +36,11 @@
     {
         "name":"はるはるTV",
         "url":"/",
+        "description":"公式ホームページ"
+    },
+    {
+        "name":"News ニュース",
+        "url":"/broadcasting/news/",
         "description":"公式ホームページ"
     }
 ]
