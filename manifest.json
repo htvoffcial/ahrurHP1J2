@@ -11,13 +11,13 @@
 "orientation": "any",
 "icons": [
     {
-        "src": "asset/lgas.png",
+        "src": "/lgas.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "maskable"
     },
     {
-        "src": "asset/lgas.png",
+        "src": "/lgas.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any"
@@ -25,7 +25,7 @@
 ],
 "screenshots": [
     {
-        "src": "assets/haruharutv.jp_(Nest Hub Max).png",
+        "src": "/assets/haruharutv.jp_(Nest Hub Max).png",
         "sizes": "2880x1800",
         "type": "image/png",
         "description": "はるはるTVの公式サイトのWebアプリ。"
