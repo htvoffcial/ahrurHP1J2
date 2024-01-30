@@ -23,7 +23,7 @@ if (localStorage.getItem("auth-uuid")) {
         localStorage.setItem("auth-uuid", parmdata[0]);
         localStorage.setItem("h-mail", parmdata[1]);
         localStorage.setItem("usemail", "yes");
-        location.href="https://shimohagi-works.haruharutv.jp/front-v1?h="+localStorage.getItem("h-mail")+"&uid="+localStorage.getItem("auth-uuid");
+        location.href="https://shimohagi-works.haruharutv.jp/front-v1?h="+parmdata[1]+"&uid="+parmdata[0];
     });
 }
 },600);
