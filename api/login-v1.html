@@ -1,0 +1,41 @@
+
+<script>
+var newScript = document.createElement("script");
+newScript.src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js";
+
+setTimeout(function(){
+if (localStorage.getItem("auth-uuid")) {
+     location.href="https://shimohagi-works.haruharutv.jp/front-v1?h="+localStorage.getItem("h-mail")+"&uid="+localStorage.getItem("auth-uuid");
+  } else {
+
+    if (getParam("UNM")) {
+        var uname = getParam("UNM");
+    } else {
+        var uname = "guest user";
+
+    }
+    console.log(uname);
+    $.ajax({
+        type: "POST",
+        url: "https://script.google.com/macros/s/AKfycbza4Dw5hgx8weXWJRcVVKpgN873zA90qEIcGKl4E1MK9QbFI5-iHFJ6xsd92Qwxj8iBsw/exec",
+        data: { field1: uname, field2: navigator.userAgent },
+        async: true
+    }).done(function (data) {
+        var parmdata = data.split('|');
+        localStorage.setItem("auth-uuid", parmdata[0]);
+        localStorage.setItem("h-mail", parmdata[1]);
+        localStorage.setItem("usemail", "yes");
+        location.href="https://shimohagi-works.haruharutv.jp/front-v1?h="+localStorage.getItem("h-mail")+"&uid="+localStorage.getItem("auth-uuid");
+    });
+}
+},600);
+function getParam(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+</script>
