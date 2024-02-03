@@ -19,7 +19,7 @@ if (localStorage.getItem("auth-uuid")) {
        
         var infod = data.split(",");
         console.log(infod);
-         if(infod[4].replace(/"/g, '') !== ""){ 
+         if(infod[4] !== ""){ 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
         newDiv.style.padding = "20px";
@@ -52,11 +52,11 @@ if (localStorage.getItem("auth-uuid")) {
         }else{
             console.log("災害情報なし");
       }
-      if(infod[2] == "ok"){
-      }else if(infod[2]=="mtn"){
+      if(infod[2].replace(/"/g, '') == "ok"){
+      }else if(infod[2].replace(/"/g, '')=="mtn"){
         location.href="https://haruharutv.jp/maintenance";
 
-      }else if(infod[2]=="block"){
+      }else if(infod[2].replace(/"/g, '')=="block"){
         location.href="https://haruharutv.jp/blocked";
         console.log("blc");
       }
