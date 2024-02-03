@@ -19,7 +19,8 @@ if (localStorage.getItem("auth-uuid")) {
        
         var infod = data.split(",");
         console.log(infod);
-         if(infod[4] !== ""){ 
+        if(infod[4] !== undefined){
+         if(infod[4].replace(/"/g, '') !== "none" ){ 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
         newDiv.style.padding = "20px";
@@ -52,6 +53,7 @@ if (localStorage.getItem("auth-uuid")) {
         }else{
             console.log("災害情報なし");
       }
+    }
       if(infod[2].replace(/"/g, '') == "ok"){
       }else if(infod[2].replace(/"/g, '')=="mtn"){
         location.href="https://haruharutv.jp/maintenance";
