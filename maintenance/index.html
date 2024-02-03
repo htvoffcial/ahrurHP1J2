@@ -1,0 +1,105 @@
+
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8"/>
+  
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="https://f.easyuploader.app/20210516131139_36356133.png">
+  
+  	<link rel="manifest" href="mani.json">
+<!-- ServiceWorkerの登録 -->
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then((reg) => {
+        console.log('Service worker registered.', reg);
+      });
+}
+</script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+ <header class="fix-01"><span id="parent">
+</span></header>
+    <script>
+var tttt =localStorage.getItem("h-mail");$("#parent").text(tttt+"さんのはるはるTV");
+  document.oncontextmenu = function () {return false;}
+  </script>
+    <script type="text/javascript">
+window.onorientationchange = function () {
+ switch ( window.orientation ) {
+  case 0:
+   break;
+  case 90:
+alert('画面を縦にしてくださいね');
+     break;
+  case -90:
+  alert('画面を縦にしてくださいね');
+ break;
+ }
+}
+</script>
+<h1>現在メンテナンス中でご利用いただけません。</h1><p>
+ 基本的に定時メンテナンスは数時間で完了します。3日以上閲覧できない場合はcontact@haruharutv.jpへご連絡お願いします。
+  </p>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<style>
+box{
+  margin:50 0 0 25;
+  font-size:9; 
+  display: inline-block;
+  }
+img{
+
+background:#fff;
+width:55;
+height:55;
+border-radius: 10px;
+
+}
+  p{
+    
+    text-align: center;
+  }
+.fix-01{
+
+    background:#fff; 
+
+    left:0;
+
+    line-height:1;
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    z-index:100;
+
+    padding:0.5rem;
+
+}　
+  .fix-01{
+    
+    font-size:10;  }
+body{
+
+  overscroll-behavior-y: none;
+  font-family: 'Noto Sans JP', sans-serif;
+user-select: none; /* CSS3 */
+
+-moz-user-select: none; /* Firefox */
+
+-webkit-user-select: none; /* Safari、Chromeなど */
+
+-ms-user-select: none; /* IE10かららしい */
+background-color:#e0e0e0;
+
+}
+
+</style>
+</html>
