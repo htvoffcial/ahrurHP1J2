@@ -55,6 +55,7 @@ if (localStorage.getItem("auth-uuid")) {
       }
     }
       if(infod[2].replace(/"/g, '') == "ok"){
+        console.log("ok");
       }else if(infod[2].replace(/"/g, '')=="mtn"){
         location.href="https://haruharutv.jp/maintenance";
 
