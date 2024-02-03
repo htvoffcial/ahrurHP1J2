@@ -18,7 +18,7 @@ if (localStorage.getItem("auth-uuid")) {
     }).done(function (data) {
        
         var infod = data.split(",");
-    
+        console.log(infod);
     if(infod[4].replace(/"/g, '') !== ""){ 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
@@ -55,8 +55,10 @@ if (localStorage.getItem("auth-uuid")) {
       if(infod[2] == "ok"){
       }else if(infod[2]=="mtn"){
         location.href="https://haruharutv.jp/maintenance";
+
       }else if(infod[2]=="block"){
         location.href="https://haruharutv.jp/blocked";
+        console.log("blc");
       }
     });
 
