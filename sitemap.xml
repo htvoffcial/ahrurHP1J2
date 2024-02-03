@@ -2,7 +2,7 @@
 <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
 <loc>https://haruharutv.jp/</loc>
-<lastmod>2024-01-20T15:13:44+00:00</lastmod>
+<lastmod>2024-02-03T23:20:00+00:00</lastmod>
 <priority>1.00</priority>
 </url>
 <url>
@@ -33,6 +33,16 @@
 <url>
 <loc>https://haruharutv.jp/broadcasting/news/article/B00001.html</loc>
 <lastmod>2024-01-20T15:13:44+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://haruharutv.jp/broadcasting/news/article/A00001.html</loc>
+<lastmod>2023-12-30T10:00:00+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://haruharutv.jp/broadcasting/news/article/C00001.html</loc>
+<lastmod>2024-02-03T09:00:00+00:00</lastmod>
 <priority>0.64</priority>
 </url>
 <url>
