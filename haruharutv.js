@@ -52,6 +52,12 @@ if (localStorage.getItem("auth-uuid")) {
         }else{
             console.log("災害情報なし");
       }
+      if(infod[2] == "ok"){
+      }else if(infod[2]=="mtn"){
+        location.href="https://haruharutv.jp/maintenance";
+      }else if(infod[2]=="block"){
+        location.href="https://haruharutv.jp/blocked";
+      }
     });
 
 } else {
