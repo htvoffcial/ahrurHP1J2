@@ -17,9 +17,9 @@ if (localStorage.getItem("auth-uuid")) {
         async: true
     }).done(function (data) {
        
-        var infod = data.split(",");
+        var infod = data.split(",").replace(/"/g, '');
         console.log(infod);
-    if(infod[4].replace(/"/g, '') !== ""){ 
+    if(infod[4] !== ""){ 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
         newDiv.style.padding = "20px";
