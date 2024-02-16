@@ -26,6 +26,12 @@
     ],
     "screenshots": [
       {
+        "src": "Screenshot_2024-02-16-17-23-56-729_com.android.chrome.jpg",
+        "sizes": "1080x2340",
+        "type": "image/png",
+        "description": "はるはるTVの公式サイトのWebアプリ。"
+      },
+      {
         "src": "/assets/haruharutv.jp_(Nest Hub Max).png",
         "sizes": "2880x1800",
         "type": "image/png",
