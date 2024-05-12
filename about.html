@@ -178,23 +178,145 @@ for (var i = 0; i < btnMenu.length; i++) {
     });
 }
         </script>
+<div style="height: 30ex;overflow: hidden;">
 <img src="" class="slid" id="sldd" alt="トップページの大きな画像">
+<p style="text-align:center;color:#fff;position:relative;top:-10ex;font-size:30px;font-weight:bold;">はるはるTV</p>
+</div>
 </div>
 <script>
-class LiteYTEmbed extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute('videoid');let playBtnEl=this.querySelector('.lty-playbtn');this.playLabel=(playBtnEl&&playBtnEl.textContent.trim())||this.getAttribute('playlabel')||'Play';if(!this.style.backgroundImage){this.style.backgroundImage=`url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg")`} if(!playBtnEl){playBtnEl=document.createElement('button');playBtnEl.type='button';playBtnEl.classList.add('lty-playbtn');this.append(playBtnEl)} if(!playBtnEl.textContent){const playBtnLabelEl=document.createElement('span');playBtnLabelEl.className='lyt-visually-hidden';playBtnLabelEl.textContent=this.playLabel;playBtnEl.append(playBtnLabelEl)} this.addEventListener('pointerover',LiteYTEmbed.warmConnections,{once:!0});this.addEventListener('click',this.addIframe)} static addPrefetch(kind,url,as){const linkEl=document.createElement('link');linkEl.rel=kind;linkEl.href=url;if(as){linkEl.as=as} document.head.append(linkEl)} static warmConnections(){if(LiteYTEmbed.preconnected)return;LiteYTEmbed.addPrefetch('preconnect','https://www.youtube-nocookie.com');LiteYTEmbed.addPrefetch('preconnect','https://www.google.com');LiteYTEmbed.addPrefetch('preconnect','https://googleads.g.doubleclick.net');LiteYTEmbed.addPrefetch('preconnect','https://static.doubleclick.net');LiteYTEmbed.preconnected=!0} addIframe(e){if(this.classList.contains('lyt-activated'))return;e.preventDefault();this.classList.add('lyt-activated');const params=new URLSearchParams(this.getAttribute('params')||[]);params.append('autoplay','1');const iframeEl=document.createElement('iframe');iframeEl.width=560;iframeEl.height=315;iframeEl.title=this.playLabel;iframeEl.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';iframeEl.allowFullscreen=!0;iframeEl.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${params.toString()}`;this.append(iframeEl);iframeEl.focus()}} customElements.define('lite-youtube',LiteYTEmbed);function TigilError(){return!0} window.onerror=TigilError;var sldelem=document.getElementById("sldd");var imgsrcs=["https://haruharutv.jp/assets/bimg-top-about.jpg","https://media-uploader.work/?mode=dl&id=11277&original=1&key=08154451-322b-4990-8d6d-c911ddb0df2e","https://media-uploader.work/?mode=dl&id=11278&original=1&key=ceac54ca-2f20-4242-a4f0-80e27c3c3e27"]; var icount=0;sldelem.src=imgsrcs[0];setInterval(function(){if(icount==imgsrcs.length-1){sldelem.src=imgsrcs[icount];icount=0}else{sldelem.src=imgsrcs[icount];icount++}},15000)
+class LiteYTEmbed extends HTMLElement{connectedCallback(){this.videoId=this.getAttribute('videoid');let playBtnEl=this.querySelector('.lty-playbtn');this.playLabel=(playBtnEl&&playBtnEl.textContent.trim())||this.getAttribute('playlabel')||'Play';if(!this.style.backgroundImage){this.style.backgroundImage=`url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg")`} if(!playBtnEl){playBtnEl=document.createElement('button');playBtnEl.type='button';playBtnEl.classList.add('lty-playbtn');this.append(playBtnEl)} if(!playBtnEl.textContent){const playBtnLabelEl=document.createElement('span');playBtnLabelEl.className='lyt-visually-hidden';playBtnLabelEl.textContent=this.playLabel;playBtnEl.append(playBtnLabelEl)} this.addEventListener('pointerover',LiteYTEmbed.warmConnections,{once:!0});this.addEventListener('click',this.addIframe)} static addPrefetch(kind,url,as){const linkEl=document.createElement('link');linkEl.rel=kind;linkEl.href=url;if(as){linkEl.as=as} document.head.append(linkEl)} static warmConnections(){if(LiteYTEmbed.preconnected)return;LiteYTEmbed.addPrefetch('preconnect','https://www.youtube-nocookie.com');LiteYTEmbed.addPrefetch('preconnect','https://www.google.com');LiteYTEmbed.addPrefetch('preconnect','https://googleads.g.doubleclick.net');LiteYTEmbed.addPrefetch('preconnect','https://static.doubleclick.net');LiteYTEmbed.preconnected=!0} addIframe(e){if(this.classList.contains('lyt-activated'))return;e.preventDefault();this.classList.add('lyt-activated');const params=new URLSearchParams(this.getAttribute('params')||[]);params.append('autoplay','1');const iframeEl=document.createElement('iframe');iframeEl.width=560;iframeEl.height=315;iframeEl.title=this.playLabel;iframeEl.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';iframeEl.allowFullscreen=!0;iframeEl.src=`https://www.youtube-nocookie.com/embed/${encodeURIComponent(this.videoId)}?${params.toString()}`;this.append(iframeEl);iframeEl.focus()}} customElements.define('lite-youtube',LiteYTEmbed);function TigilError(){return!0} window.onerror=TigilError;var sldelem=document.getElementById("sldd");var imgsrcs=["https://media-uploader.work/?mode=dl&id=11277&original=1&key=08154451-322b-4990-8d6d-c911ddb0df2e","https://media-uploader.work/?mode=dl&id=11278&original=1&key=ceac54ca-2f20-4242-a4f0-80e27c3c3e27"]; var icount=0;sldelem.src=imgsrcs[0];setInterval(function(){if(icount==imgsrcs.length-1){sldelem.src=imgsrcs[icount];icount=0}else{sldelem.src=imgsrcs[icount];icount++}},15000)
 </script>
-<style>.slid{width:100%;}.topbox{width:100%; display: flex;align-items: center;}</style>
+<style>.slid{width:100%;  filter: brightness(1.75);-webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);}.topbox{width:100%; display: flex;align-items: center;}</style>
+<style>
+body {
+  font-family: Arial, sans-serif;
+}
 
-<h1>
-    About us 運営情報</h1>
-<p>
-    所在地 : 千葉県<br>
-    ミッション : みんなのための、夢と冒険が詰まったテレビ。<br>
-    メール : haruharu@haruharutv.jp<br>
-</p>
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #ddd;
+margin-bottom:20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+th {width: 30%;
+text-align:left;
+  background-color: #f2f2f2;
+ 
+}
+
+tr:nth-pairent(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}.container {
+    width: 800px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+th, td {
+   display: block;
+        text-align: left;
+}
+
+    .container {
+        width: 600px;
+        margin: 0 auto;
+        width:95%;
+    }
+}
+</style>
+<div class="container">
+<h1>団体概要</h1>
+<p>Company</p>
+<table>
+  <tr>
+    <th>邦文屋号</th>
+    <td>はるはるTV</td>
+  </tr>
+ <tr>
+    <th>英文屋号</th>
+    <td>Haruharu Television Japan.</td>
+  </tr>
+
+  <tr>
+    <th>概要</th>
+    <td>はるはるTVは、情報の発信とエンターテイメントの提供を通じて、視聴者に笑顔や感動をもたらすコンテンツを提供することを使命としています。私たちは日々の生活を豊かにするために、多様な番組やイベントを展開しています。</td>
+  </tr>
+  <tr>
+    <th>沿革</th>
+    <td>
+      <ul>
+        <li>平成26年4月1日：創立</li>
+        <li>平成31年：5周年を記念</li>
+        <li>令和6年1月1日：当団体から派生した音楽出版団体「Haruharu Music Group」が創立。それに伴い、音楽以外の書籍などを手掛ける「はるはるTV出版」も創立。</li>
+        <li>令和6年3月1日：組織番号7863366019908が割り当て</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th>代表者</th>
+    <td><a href="https://admin.profile.haruharutv.jp/">はるはる</a> (2024年更新)</td>
+  </tr>
+  <tr>
+    <th>所属団体</th>
+    <td>全日本著作権連盟 (役員会員)</td>
+  </tr>
+  <tr>
+    <th>所在地</th>
+    <td>千葉県</td>
+  </tr>
+  <tr>
+    <th>活動地域</th>
+    <td>関東を中心とした全国</td>
+  </tr>
+  <tr>
+    <th>ミッション</th>
+    <td>みんなのための、夢と冒険が詰まったテレビ。</td>
+  </tr>
+  <tr>
+    <th>メールお問い合わせ</th>
+    <td><a href="mailto:contact@haruharutv.jp">contact@haruharutv.jp</a></td>
+  </tr>
+  <tr>
+    <th>組織番号</th>
+    <td><a href="https://soshiki-bangou.indcs.haruharutv.jp/history.html?id=7863366019908">7863366019908</a></td>
+  </tr>
+  <tr>
+    <th>組織番号についての説明</th>
+    <td>
+      はるはるTVは、組織番号を導入しました。この番号は国税庁の法人番号とは異なり、登録された様々な形態の組織を識別することが目的です。組織番号の導入により、正しい組織を識別し、適切に運営されているかを確認することが可能となります。
+    </td>
+  </tr>
+  <tr>
+    <th>お知らせ</th>
+    <td>
+      組織番号の導入に伴い、一部の環境で予期せぬ動作が発生する可能性があります。現在わかっている不具合については、随時修正を行っています。修正できない場合はお知らせ記事に追記します。はるはるTVは、今後も機能の調整やAPI提供を通じて、より多くの環境でさまざまな機能を利用できるように努めています。
+    </td>
+  </tr>
+  <tr>
+    <th>提供元</th>
+    <td>
+      はるはるTVグループの「Indeeecsa」の組織番号検索サイトによって提供されています。
+    </td>
+  </tr>
+ </table>
+
 お問い合わせに関する連絡先等の詳細は、<a href="https://haruharutv.jp/contact" alt="お問い合わせについて">こちら
 
 </a>
+</div>
 <style>#ch1{border-radius:10px;display:block;padding:20px; color:#fff;background: linear-gradient(17deg, rgba(6,5,0,1) 0%, rgba(31,24,0,1) 68%, rgba(80,79,75,1) 98%);text-align:center;}#pr1{padding-top:250px;padding-left:20px;padding-right:20px;height:100vh;background-image:url(https://ul.h3z.jp/4BerWK7H.jpg);background-repeat: no-repeat;background-size: cover;background-attachment: fixed;margin:0;display:fixed;}</style>
 
 
