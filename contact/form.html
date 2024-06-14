@@ -55,7 +55,7 @@ s0.parentNode.insertBefore(s1,s0);
 <img src="https://haruharutv.jp/lling.png" class="tlg" alt="画面上部のロゴ「はるはるTV」"></a>
  
  </div>
-<div>
+<div class="ctner">
 <div id="oas" style="width:100%;height:100%;display:none;position:absolute;left:0px;top:0px;z-index: 1000;background-color: aliceblue;"></div>
 <div style="margin:10px;">
 <h1>お問い合わせ CONTACT</h1>
@@ -243,8 +243,20 @@ lite-youtube{
 width:60%;
 
 }
+.ctner{
+  width: 1060px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+    .ctner {
+        width: 600px;
+        margin: 0 auto;
+        width:95%;
+    }
+}
 .flb1{display:flex;align-items: center; }
   @media screen and (max-width:800px){
+    
     textarea{
       width:95%;
     }
