@@ -54,8 +54,78 @@ window.onload = function() {
 <meta name="yandex-verification" content="86ecfe3b9e9fab47" />
 
 <!-- Cookie同意画面 UserLocal -->
-<script src="https://hmg-publisha.haruharutv.jp/cookie_banner_tag/ulcc.min.js"></script>
 
+<script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var _ulcc_conf = _ulcc_conf || {};
+    _ulcc_conf['domain'] = '.haruharutv.jp'; /**** 対象ドメイン（サブドメインをまたいで管理する場合、ドメインの先頭に「.」をつけてください。例： .example.com ****/
+    _ulcc_conf['ga_tracking_id'] = [''];	/**** ここにGAのトラッキングIDを入力（任意） ****/
+    _ulcc_conf['cookie_policy_url'] = '' /**** ここにポリシーページのURLを入力（任意） ****/
+    _ulcc_conf['cookie_expiry_days'] = { 'allow': 365, 'deny': 30 }; /**** バナー再表示の期限 ****/
+    var _ulccwid_options = {
+      design: {
+        bg_color: "lightblue", /* 背景色 */
+        text_color: "white", /* 文字色 */
+        btn_bg_color: "cadetblue", /* 同意ボタンの背景色 */
+        btn_text_color: "white" /* 同意ボタンの背景色 */
+      },
+      content: {
+        ja: {
+          message: "Cookieの使用について 当サイトでは、お客様により良いサービスを提供するため、Cookieを使用しています。Cookieは、サイトの機能を最適化し、利用状況の分析、およびパーソナライズされたコンテンツの提供に利用されます。",
+          link_text: "プライバシーポリシー",
+          link_url: "",
+          allow_btn_text: "同意する",
+          deny_btn_text: "Cookieを保存しない"
+        },
+        en: {
+          message: "Use of Cookies Our website uses cookies to enhance your experience and provide personalized services. Cookies help us optimize the functionality of our site, analyze usage, and deliver personalized content.",
+          link_text: "Privacy Policy",
+          link_url: "",
+          allow_btn_text: "Accept",
+          deny_btn_text: "Do Not Save Cookies"
+        }
+      }
+    };
+  
+    var _ulcc_allow_cookie_function = function(){
+        localStorage.setItem("data_select","agree");
+    };
+  
+    var _ulcc_deny_cookie_function = function(){
+        localStorage.setItem("data_select","disabled");
+    };
+  
+    var _uiconv = _uiconv || []; var _uic = _uic || {}; var _gaq = _gaq || [];
+    (function () {
+      var js_src = 'https://hmg-publisha.haruharutv.jp/cookie_banner_tag/ulcc.min.js'; 
+      var style_src = 'https://hmg-publisha.haruharutv.jp/cookie_banner_tag/ulcc.min.css'; 
+  
+      var cc = document.createElement('script'); cc.type = 'text/javascript'; cc.async = true;
+      cc.src = js_src;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(cc, s);
+  
+      window.ga = window.ga || function () {
+        (ga.q = ga.q || []).push(arguments)
+      };ga.l=+new Date;
+      for (var i = 0; i < _ulcc_conf['ga_tracking_id'].length; i++) {
+        ga('create', _ulcc_conf['ga_tracking_id'][i], {
+          'storage': 'none'
+        });
+        ga('set', 'anonymizeIp', true);
+      }
+  
+      var head = document.getElementsByTagName('head')[0];
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = style_src;
+      link.media = 'all';
+      head.appendChild(link);
+    })();
+  </script>
+<!-- ここまで同意画面 -->  
 <script type="application/ld+json">
 
     {
@@ -95,7 +165,7 @@ window.onload = function() {
       }
 
   </script>
-  <script src="//accaii.com/haruharutv/script.js" async></script><noscript><img src="//accaii.com/haruharutv/script?guid=on"></noscript>
+ <!-- <script src="//accaii.com/haruharutv/script.js" async></script><noscript><img src="//accaii.com/haruharutv/script?guid=on"></noscript> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -296,7 +366,9 @@ class LiteYTEmbed extends HTMLElement{connectedCallback(){this.videoId=this.getA
 
 
 <div style="text-align:center;padding:2px;background:#4D4D4D;color:#fff;text-decoration: none;">
-<a style="color:#fff;text-decoration: none;font-size:small;" href="https://telegra.ph/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BCNotice---httpsharuharutvjp-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6-12-29">当サイトのプライバシーポリシー</a>
+<!-- 
+    <a style="color:#fff;text-decoration: none;font-size:small;" href="https://telegra.ph/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BCNotice---httpsharuharutvjp-%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6-12-29">当サイトのプライバシーポリシー</a> 
+-->
 <a style="color:#fff;text-decoration: none;font-size:small; margin-left:10px;" href="https://haruharutv.jp/contact/">お問い合わせ窓口</a>
 <a style="color:#fff;text-decoration: none;font-size:small; margin-left:10px;" href="https://haruharutv.jp/terms">利用規約</a>
 </div>
