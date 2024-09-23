@@ -483,7 +483,7 @@
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 4000); // 4秒ごとにスライドを切り替え
+      setTimeout(showSlides, 6000); // 4秒ごとにスライドを切り替え
     }
 
     function plusSlides(n) {
@@ -516,7 +516,7 @@
 
     .slider {
       display: flex;
-      width: 100%;
+      width: calc(100% - 70px);
     }
 
     .slide {
