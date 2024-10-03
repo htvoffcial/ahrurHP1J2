@@ -36,6 +36,7 @@ if (localStorage.getItem("auth-uuid")) {
         newDiv.appendChild(paragraph);
         var displayinfo = infod[4].replace(/"/g, '').replace(/]/g, '');
         paragraph.innerHTML = displayinfo.replace(/\|/g, '<br>\n');
+        /*
         var link = document.createElement("a");
         link.href = "https://www.data.jma.go.jp/multi/quake/index.html?lang=jp";
         link.style.fontWeight = "bold";
@@ -47,7 +48,8 @@ if (localStorage.getItem("auth-uuid")) {
         link.style.borderRadius = "50px";
         link.style.textDecoration = "none";
         link.textContent = "気象庁のホームページで詳細を確認する";
-        newDiv.appendChild(link);
+        newDiv.appendChild(link); 
+        */
         var targetDiv = document.getElementById("tdiv");
         targetDiv.appendChild(newDiv);
         }else{
