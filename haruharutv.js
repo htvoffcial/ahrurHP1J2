@@ -30,7 +30,7 @@ if (localStorage.getItem("auth-uuid")) {
         boldText.style.fontWeight = "bold";
         boldText.style.color = "orangered";
         boldText.style.fontSize = "20px";
-        boldText.textContent = "i 災害情報";
+        boldText.textContent = "i お知らせ";
         newDiv.appendChild(boldText);
         var paragraph = document.createElement("p");
         newDiv.appendChild(paragraph);
