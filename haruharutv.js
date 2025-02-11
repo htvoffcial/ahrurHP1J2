@@ -18,8 +18,9 @@ if (localStorage.getItem("auth-uuid")) {
     }).done(function (data) {
        
         var infod = data.split(",");
-    
-    if(infod[4].replace(/"/g, '') !== ""){ 
+        console.log(infod);
+        if(infod[4] !== undefined){
+         if(infod[4].replace(/"/g, '') !== "none" ){ 
         var newDiv = document.createElement("div");
         newDiv.style.border = "2px orangered solid";
         newDiv.style.padding = "20px";
@@ -29,12 +30,13 @@ if (localStorage.getItem("auth-uuid")) {
         boldText.style.fontWeight = "bold";
         boldText.style.color = "orangered";
         boldText.style.fontSize = "20px";
-        boldText.textContent = "i 災害情報";
+        boldText.textContent = "i お知らせ";
         newDiv.appendChild(boldText);
         var paragraph = document.createElement("p");
         newDiv.appendChild(paragraph);
         var displayinfo = infod[4].replace(/"/g, '').replace(/]/g, '');
         paragraph.innerHTML = displayinfo.replace(/\|/g, '<br>\n');
+        /*
         var link = document.createElement("a");
         link.href = "https://www.data.jma.go.jp/multi/quake/index.html?lang=jp";
         link.style.fontWeight = "bold";
@@ -46,11 +48,22 @@ if (localStorage.getItem("auth-uuid")) {
         link.style.borderRadius = "50px";
         link.style.textDecoration = "none";
         link.textContent = "気象庁のホームページで詳細を確認する";
-        newDiv.appendChild(link);
+        newDiv.appendChild(link); 
+        */
         var targetDiv = document.getElementById("tdiv");
         targetDiv.appendChild(newDiv);
         }else{
             console.log("災害情報なし");
+      }
+    }
+      if(infod[2].replace(/"/g, '') == "ok"){
+        console.log("ok");
+      }else if(infod[2].replace(/"/g, '')=="mtn"){
+        location.href="https://haruharutv.jp/maintenance";
+
+      }else if(infod[2].replace(/"/g, '')=="block"){
+        location.href="https://haruharutv.jp/blocked";
+        console.log("blc");
       }
     });
 

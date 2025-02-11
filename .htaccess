@@ -1,0 +1,12 @@
+<FilesMatch "\.html$">
+Header set Content-Type 'text/html; charset=utf-8'
+</FilesMatch>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+
+#order deny,allow
+#deny from all
+#allow from 114.177.106.10 localhost
