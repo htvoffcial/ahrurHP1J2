@@ -201,7 +201,8 @@ lite-youtube {
     }
 
     #flb {
-        display: inline-block
+        display: flex;
+
     }
 }
 
